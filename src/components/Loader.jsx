@@ -1,9 +1,13 @@
-import React from 'react'
+import { Html } from "@react-three/drei";
 
-const Loader = () => {
+const Canvasloader = () => {
   return (
-    <div>Loader</div>
-  )
-}
+    <Html center>
+      <div style={{ color: "white", fontSize: "14px" }}>
+        Cargando...
+      </div>
+    </Html>
+  );
+};
 
-export default Loader
+export default Canvasloader;

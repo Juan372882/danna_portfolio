@@ -1,15 +1,33 @@
-import { Suspense } from 'react';
+import { Suspense, useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 
 import Canvasloader from '../Loader';
 
-const Coding = () => {
+const Coding = ({ isMobile }) => {
   const { scene } = useGLTF('/code_list/scene.gltf');
-  return <primitive object={scene} scale={3.2} position={[-1.5, 0, 0]} rotation={[-0.01, -0.2, -0.1]}/>;
+  return <primitive object={scene} scale={isMobile ? 2.4 : 3.2} position={isMobile ? [0.3, 0, 0] : [-1.5, 0, 0]} rotation={[-0.01, -0.2, -0.1]}/>;
 };
 
-const Codings = () => {
+const CodingCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 500px)");
+      setIsMobile(mediaQuery.matches);
+
+      const handleMediaQueryChange = (event) =>{
+        setIsMobile(event.matches);
+      }
+
+      mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+      return () => {
+        mediaQuery.removeEventListener('change', handleMediaQueryChange);
+      }
+  }, [])
+  
+
   return (
     <Canvas
       frameloop="demand"
@@ -25,11 +43,11 @@ const Codings = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Coding />
+        <Coding isMobile={isMobile}/>
         <Preload all />
       </Suspense>
     </Canvas>
   );
 };
 
-export default Codings;
+export default CodingCanvas;

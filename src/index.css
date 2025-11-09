@@ -59,6 +59,11 @@
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
 
+.redwine-card-gradient {
+  background: linear-gradient(90deg, #9a0526 2%, #ff6f91 98%);
+  background: -webkit-linear-gradient(90deg, #9a0526 2%, #ff6f91 98%);
+}
+
 .orange-text-gradient {
   background: #f12711; /* fallback for old browsers */
   background: -webkit-linear-gradient(

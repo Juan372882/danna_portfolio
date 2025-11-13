@@ -3,12 +3,11 @@ import {
   backend,
   creator,
   web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
+  smartolt,
+  zequenze,
+  gaiia,
+  powerbi,
+  canva,
   tailwind,
   nodejs,
   mongodb,
@@ -22,6 +21,7 @@ import {
   jobit,
   tripguide,
   threejs,
+  botmaker,
 } from "../assets";
 
 export const navLinks = [
@@ -60,31 +60,31 @@ const services = [
 
 const technologies = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "Botmaker",
+    icon: botmaker,
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "Gaiia",
+    icon: gaiia,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "Smartolt",
+    icon: smartolt,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Zequenze",
+    icon: zequenze,
   },
   {
     name: "React JS",
-    icon: reactjs,
+    icon: powerbi,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Canva",
+    icon: canva,
   },
   {
-    name: "Tailwind CSS",
+    name: "Tailwind gaiia",
     icon: tailwind,
   },
   {
@@ -218,7 +218,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "css",
         color: "pink-text-gradient",
       },
     ],
@@ -239,7 +239,7 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "gaiia",
         color: "pink-text-gradient",
       },
     ],
